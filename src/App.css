@@ -1,10 +1,30 @@
-.App {
-  text-align: center;
+.sidebar{
+  background-color: black;
+  height: 100vh;
+}
+.sidebar img{
+  width: 200px;
+}
+.sidebar .icon{
+  color: rgb(145, 145, 145);
+  font-size: 1.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input{
+  width: 100px;
+}
+
+.button{
+  padding: 3px;
+}
+
+a{
+  color: rgb(145, 145, 145);
+  text-decoration: none;
+}
+
+a:hover{
+  color: white;
 }
 
 @media (prefers-reduced-motion: no-preference) {

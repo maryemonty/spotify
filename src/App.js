@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import { Col, Row } from "react-bootstrap";
+import SideBar from './components/SideBar';
+import MyNav from './components/myNav';
+import Discover from './components/Discover';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='overflow-hidden'>
+      <BrowserRouter>
+      <Row>
+        <Col md={2}>
+          <SideBar/>
+        </Col>
+        <Col md={10}>
+          
+            <MyNav/>
+              <Routes>
+                <Route path="/" element={<Home/>} />
+                <Route path="/discover" element={<Discover/>}/>
+              </Routes>
+          
+        </Col>
+      </Row>
+      </BrowserRouter>
     </div>
   );
 }
