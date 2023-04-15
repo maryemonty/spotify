@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Card, Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const HomeCards = (props) => {
 
@@ -40,7 +41,7 @@ const HomeCards = (props) => {
                             <Card.Img variant="top" src={a.album.cover_medium} className="w-100 h-100 object-fit-cover" />
                             <Card.Body>
                                 <Card.Title className="text-truncate">{a.title}</Card.Title>
-                                <Card.Title className="text-truncate">{a.artist.name}</Card.Title>
+                                <Card.Title className="text-truncate"><Link to='/artist'>{a.artist.name}</Link></Card.Title>
                             </Card.Body>
                         </Card>
                     </Col>

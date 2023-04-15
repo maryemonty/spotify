@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Card, Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const SearchCards = (props) => {
 
@@ -33,14 +34,14 @@ const SearchCards = (props) => {
 
     return (
         <div className="p-4 m-2">
-            <Row className="p-0 m-0">
+            <Row>
                 {albums.map((a, index) => (
                     <Col sm={3} key={index}>
-                        <Card className="bg-dark text-light w-100">
-                            <Card.Img variant="top" src={a.album.cover_medium} className="w-100 h-100 object-fit-cover" />
+                        <Card className="bg-dark text-light w-100 mt-4">
+                            <Card.Img variant="top" src={a.album.cover_medium} className="p-3 rounded-circle" />
                             <Card.Body>
                                 <Card.Title className="text-truncate">{a.title}</Card.Title>
-                                <Card.Title className="text-truncate">{a.artist.name}</Card.Title>
+                                <Card.Title className="text-truncate"><Link to='/artist'>{a.artist.name}</Link></Card.Title>
                             </Card.Body>
                         </Card>
                     </Col>
