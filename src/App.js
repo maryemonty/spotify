@@ -6,6 +6,7 @@ import { Col, Row } from "react-bootstrap";
 import SideBar from './components/SideBar';
 import MyNav from './components/myNav';
 import Discover from './components/Discover';
+import Search from './components/Search';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/discover" element={<Discover/>}/>
+                <Route path="/search" element={<Search/>}/>
               </Routes>
           
         </Col>

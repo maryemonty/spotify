@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
 import logo from '../assets/Spotify-Logo.wine.svg'
 import { FaHome, FaBookOpen } from 'react-icons/fa';
+import { useState } from "react";
 
-function SideBar(){
+const SideBar = () => {
+
     return(
         <div className="sidebar d-flex flex-column align-items-start">
             <Link to="/"><img src={logo} alt="logo spotify" /></Link>
@@ -10,10 +12,9 @@ function SideBar(){
                 <Link to="/"><FaHome className='icon'/> Home</Link>
                 <Link to="/" className='mt-3'><FaBookOpen className='icon'/> Your Library</Link>
             </div>
-            <div className='d-flex ms-4'>
-                <input className='mt-3 input' type='text' placeholder='Search' />
-                <button className='btn btn-dark button'>Go</button>
-            </div>
+            <Link to='/search'>
+                <p>Search</p>
+            </Link>
         </div>
     )
 }
